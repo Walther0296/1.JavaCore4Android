@@ -2,25 +2,25 @@ package main.l2.BasicConstruction;
 
 public class Main {
     public static void main(String[] args) {
-        // check();
-        check2();
+        // check(4, 6);
+        // check2(-9);
+        // check3(6);
+        // check4("Пуля", 4);
+        // check5(1704);
     }
 
     // 1. Написать метод, принимающий на вход два целых числа и проверяющий, что их сумма лежит в пределах от 10 до 20 (
     //   включительно), если да – вернуть true, в противном случае – false.
 
 
-    public static void check() {
-        int a = 5;
-        int b = 2;
+    public static void check(int a, int b) {
         int sum = a + b;
         System.out.println(sum <= 20 & sum >= 10);
     }
 
     // 2. Написать метод, которому в качестве параметра передается целое число, метод должен напечатать в консоль,
     //   положительное ли число передали или отрицательное. Замечание: ноль считаем положительным числом.
-    public static void check2() {
-        int a = -9;
+    public static void check2(int a) {
         if (a < 0) {
             System.out.println("Число отрицательное");
         } else {
@@ -28,4 +28,27 @@ public class Main {
         }
     }
 
+    // 3. Написать метод, которому в качестве параметра передается целое число. Метод должен вернуть true, если число
+    //   отрицательное, и вернуть false если положительное.
+
+    public static void check3(int a) {
+        System.out.println(a < 0);
+    }
+
+    ;
+
+    // 4. Написать метод, которому в качестве аргументов передается строка и число, метод должен отпечатать в консоль указанную
+    //   строку, указанное количество раз;
+
+    public static void check4(String string, int a) {
+        for (int i = 0; i < a; i++) {
+            System.out.println(string);
+        }
+    }
+
+    // 5. * Написать метод, который определяет, является ли год високосным, и возвращает boolean (високосный - true, не
+    //  високосный - false). Каждый 4-й год является високосным, кроме каждого 100-го, при этом каждый 400-й – високосный.
+    public static void check5(int year) {
+                System.out.println((year%4==0)&((!(year%100==0))||(year%400==0)));
+    }
 }
