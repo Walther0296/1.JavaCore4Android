@@ -46,7 +46,6 @@ public class Main {
         } else if (value <= 100) {
             System.out.println("Желтый");
         } else System.out.println("Зеленый");
-
     }
 
     ;
