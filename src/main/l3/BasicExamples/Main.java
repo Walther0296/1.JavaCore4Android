@@ -8,7 +8,8 @@ public class Main {
         // changeArray();
         // arrHundred();
         // thirdTask();
-        fourthTask(9);
+        // fourthTask(25);
+        fifthTask(4, 4);
     }
 
     // 1. Задать целочисленный массив, состоящий из элементов 0 и 1. Например: [ 1, 1, 0, 0, 1, 0, 1, 1, 0, 0 ]. С помощью
@@ -53,19 +54,32 @@ public class Main {
     //   есть [0][0], [1][1], [2][2], …, [n][n];
 
     private static void fourthTask(int a) {
-        int[][] table = new int[a][a];
+        int[][] arr = new int[a][a];
         for (int i = 0; i < a; i++) {
             for (int j = 0; j < a; j++) {
-                if ((i == j) || (i+j==(a-1))) {
-                System.out.print(table[i][j] = 1);
-            }
-            else {
-                    System.out.printf(" ");
+                if ((i == j) || (i + j == (a - 1))) {
+                    System.out.print(arr[i][j] = 1);
+                } else {
+                    System.out.print(" ");
                 }
             }
             System.out.println();
         }
-
     }
+
+// 5. Написать метод, принимающий на вход два аргумента: len и initialValue,
+// и возвращающий одномерный массив типа int
+//   длиной len, каждая ячейка которого равна initialValue;
+
+    private static void fifthTask(int len, int initialValue){
+        int [] arr = new int[len];
+        for (int i = 0; i < arr.length; i++){
+            arr [i] = initialValue;
+        }
+        System.out.println(Arrays.toString(arr));
+    }
+
+    // 6.* Задать одномерный массив и найти в нем минимальный и максимальный элементы ;
+
 
 }
