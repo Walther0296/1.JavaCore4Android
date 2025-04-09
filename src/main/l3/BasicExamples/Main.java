@@ -10,7 +10,8 @@ public class Main {
         // fourthTask(25);
         // fifthTask(4, 4);
         // sixthTask();
-        // seventhTask(new int[]{3, 5, 3, 2, 6, 2, 1});
+        seventhTask(new int[]{8, 8, 4, 6, 10, 16});
+        //eighthTask(new int[]{2, 2, 2, 2, 8, 4, 6, 10, 12}, 5);
     }
 
     // 1. Задать целочисленный массив, состоящий из элементов 0 и 1. Например: [ 1, 1, 0, 0, 1, 0, 1, 1, 0, 0 ]. С помощью
@@ -112,7 +113,22 @@ public class Main {
         for (int i : arr) {
             sum += i;
         }
-        System.out.println(sum % 2 == 0);
+
+        int abc = 0;
+
+        for (int i = 0; i < arr.length; i++) {
+            abc += arr[i];
+            int cba = sum - abc;
+
+            if (abc == cba){
+                System.out.println("true");
+                break;
+            }
+
+            if (abc == sum){
+                System.out.println("false");
+            }
+        }
     }
 
     // 8. *** Написать метод, которому на вход подается одномерный массив и число n (может быть положительным, или
@@ -123,8 +139,10 @@ public class Main {
     //   Если выполнение задач вызывает трудности, можете обратиться к последней странице методического пособия. Для задач
     //   со * не нужно искать решение в интернете, иначе нет смысла их выполнять.
 
-    private static void eighthTask (int [] arr, int n){
+    private static void eighthTask(int[] arr, int n) {
+        for (int i = 0; i < arr.length; i++) {
 
+        }
     }
 
 }
