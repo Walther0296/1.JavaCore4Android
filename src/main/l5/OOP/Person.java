@@ -1,6 +1,6 @@
 package main.l5.OOP;
 
-public class Employee {
+public class Person {
     // 1. Создать класс ""Сотрудник"" с полями: ФИО, должность, email, телефон, зарплата, возраст.
     //Конструктор класса должен заполнять эти поля при создании объекта.
 
@@ -11,7 +11,7 @@ public class Employee {
     int salary;
     int age;
 
-    public Employee(String name, String position, String email, String tel, int salary, int age) {
+    public Person(String name, String position, String email, String tel, int salary, int age) {
         this.name = name;
         this.position = position;
         this.email = email;
@@ -19,8 +19,17 @@ public class Employee {
         this.salary = salary;
         this.age = age;
     }
+    // 2. Внутри класса «Сотрудник» написать метод, который выводит информацию об объекте в консоль.
 
     public void printInfo() {
-        System.out.println(name);
+        System.out.println(name+" "+position);
+    }
+
+    public void age40(Person[] persArray) {
+        for (Person person : persArray) {
+            if (person.age > 40) {
+                System.out.println(person.name);
+            }
+        }
     }
 }
