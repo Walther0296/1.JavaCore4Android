@@ -16,11 +16,11 @@ public class Main {
 
     }
 
+    // 4. С помощью цикла вывести информацию только о сотрудниках старше 40 лет.
     private static void age40(Person[] persArray) {
         for (Person person : persArray) {
             if (person.age > 40) {
                 System.out.println(person.name);
-                ;
             }
         }
     }
