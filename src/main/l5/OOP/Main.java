@@ -12,6 +12,16 @@ public class Main {
         // потом для каждой ячейки массива задаем объект persArray[1] = new Person(...); ... persArray[4] = new Person(...);
 
         persArray[1].printInfo();
+        age40(persArray);
 
+    }
+
+    private static void age40(Person[] persArray) {
+        for (Person person : persArray) {
+            if (person.age > 40) {
+                System.out.println(person.name);
+                ;
+            }
         }
     }
+}

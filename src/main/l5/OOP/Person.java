@@ -22,14 +22,6 @@ public class Person {
     // 2. Внутри класса «Сотрудник» написать метод, который выводит информацию об объекте в консоль.
 
     public void printInfo() {
-        System.out.println(name+" "+position);
-    }
-
-    public void age40(Person[] persArray) {
-        for (Person person : persArray) {
-            if (person.age > 40) {
-                System.out.println(person.name);
-            }
-        }
+        System.out.println(name + " " + position);
     }
 }
