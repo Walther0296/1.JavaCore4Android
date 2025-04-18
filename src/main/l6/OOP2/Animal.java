@@ -1,20 +1,22 @@
 package main.l6.OOP2;
 
-public class Animal {
+public abstract class Animal {
     String name;
-    int distance;
+    private static int count;    // счетчик количества созданных животных (в том числе клонированных) не стал тут разделять.
 
-
-    public Animal(String name) {
-        this.name = name;
-        this.distance = distance;
+    public Animal() {
+        count++;
     }
+
+    public static int getCount() {
+        return count;
+    }
+
 
     public void run(int distance) {
-        System.out.println("Животное пробежало " + distance + " метров.");
     }
 
-    public void swim (int distance){
-        System.out.println("Животное проплыло " + distance + " метров");
+    public void swim(int distance) {
     }
+
 }
