@@ -7,12 +7,12 @@ public class Main {
         Plate plate = new Plate(700);
 
         Cat[] cat = new Cat[6];
-        cat[0] = new Cat("Мурзик", 100, 3);
+        cat[0] = new Cat("Мурзик", 300, 3);
         cat[1] = new Cat("Тошик", 300, 2);
         cat[2] = new Cat("Муся", 200, 4);
         cat[3] = new Cat("Коржик", 100, 2);
         cat[4] = new Cat("Кузя", 200, 5);
-        cat[5] = new Cat("Чубайс", 300, 1);
+        cat[5] = new Cat("Чуб", 300, 1);
         System.out.println("Сейчас в миске " + plate.getPlate() + " грамм кошачьего корма.\n");
 
 
