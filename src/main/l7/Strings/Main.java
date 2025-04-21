@@ -13,6 +13,7 @@ public class Main {
         cat[3] = new Cat("Коржик", 100, 2);
         cat[4] = new Cat("Кузя", 200, 5);
         cat[5] = new Cat("Чубайс", 300, 1);
+        System.out.println("Сейчас в миске " + plate.getPlate() + " грамм кошачьего корма.\n");
 
 
         do {
