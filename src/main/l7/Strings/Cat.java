@@ -1,22 +1,49 @@
 package main.l7.Strings;
 
-import java.security.PublicKey;
 import java.util.concurrent.ThreadLocalRandom;
 
+
 public class Cat {
-    String name;
+    private String name;
+    private int appetite;
+    private int satietyTime;
+    private int satiety;
 
-    public Cat(String name) {
-        this.name = name;
-    }
-
-    public String getName() {
+    String getName() {
         return name;
     }
 
-    public void eat (Plate plate){
-        int appetite = 5 + ThreadLocalRandom.current().nextInt(25);
-        System.out.println("Текущий аппетит кота " + appetite);
-        plate.decreaseFood(appetite);
+    int getAppetite() {
+        return appetite;
+    }
+
+    int getSatietyTime() {
+        return satietyTime;
+    }
+
+    int getSatiety() {
+        return satiety;
+    }
+
+    void setSatiety(int satiety) {
+        this.satiety = satiety;
+    }
+
+    Cat(String name, int appetite, int satietyTime) {
+
+        this.name = name;
+        this.appetite = appetite;
+        this.satietyTime = satietyTime;
+        this.satiety = 0;
+    }
+
+    void eat(Plate p) {
+        p.decreaseFood(appetite);
+        satiety += satietyTime;
     }
 }
+
+// Каждому коту нужно добавить поле сытость (когда создаем котов, они голодны). Если коту удалось покушать (хватило
+//   еды), сытость = true.
+
+
